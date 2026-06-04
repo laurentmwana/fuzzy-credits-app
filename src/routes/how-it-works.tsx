@@ -1,9 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { BaseLayout } from '#/layouts/base-layout'
 
 export const Route = createFileRoute('/how-it-works')({
-  component: RouteComponent,
+  component: Home,
 })
 
-function RouteComponent() {
-  return <div>Hello "/how-it-works"!</div>
+function Home() {
+  return (
+    <BaseLayout>
+      <div className="container container-spacing">How It Works</div>
+    </BaseLayout>
+  )
 }

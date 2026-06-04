@@ -136,3 +136,7 @@ button {
 .container {
   @apply mx-auto max-w-7xl px-4;
 }
+
+.container-spacing {
+  @apply py-10 lg:py-14;
+}
