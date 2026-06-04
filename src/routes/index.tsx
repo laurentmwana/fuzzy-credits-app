@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Navbar } from '#/components/navbar'
+import { BaseLayout } from '#/layouts/base-layout'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -7,8 +7,8 @@ export const Route = createFileRoute('/')({
 
 function Home() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <BaseLayout>
+      <div className="container container-spacing">Welcome</div>
+    </BaseLayout>
   )
 }
