@@ -128,3 +128,11 @@
     @apply font-sans;
   }
 }
+
+button {
+  @apply cursor-pointer;
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-4;
+}
