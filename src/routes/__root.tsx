@@ -6,6 +6,8 @@ import {
 } from '@tanstack/react-router'
 import appCss from '../styles.css?url'
 import { ThemeProvider } from '#/components/themes/theme-provider'
+import { TooltipProvider } from '#/components/ui/tooltip'
+import { Toaster } from '#/components/ui/sonner'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -39,7 +41,10 @@ function RootDocument() {
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider defaultTheme="system" storageKey="theme">
-          <Outlet />
+          <TooltipProvider>
+            <Toaster position="bottom-center" closeButton={true} />
+            <Outlet />
+          </TooltipProvider>
         </ThemeProvider>
         <Scripts />
       </body>
