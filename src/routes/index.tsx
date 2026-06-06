@@ -1,5 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { BaseLayout } from '#/layouts/base-layout'
+import { LandingHero } from '#/features/landing-hero'
+import {
+  CriteriaSection,
+  DecisionSection,
+  FeatureGrid,
+} from '#/features/landing-section'
+import { LandingCta } from '#/features/landing-cta'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -8,7 +15,11 @@ export const Route = createFileRoute('/')({
 function Home() {
   return (
     <BaseLayout>
-      <div className="container container-spacing">Welcome</div>
+      <LandingHero />
+      <FeatureGrid />
+      <CriteriaSection />
+      <DecisionSection />
+      <LandingCta />
     </BaseLayout>
   )
 }
