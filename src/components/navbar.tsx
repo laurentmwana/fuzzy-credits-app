@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import { Link, useLocation } from '@tanstack/react-router'
-import { Menu } from 'lucide-react'
+import { Activity, Menu } from 'lucide-react'
 import { useState } from 'react'
 import { ModeToggle } from './themes/mode-toggle'
 
@@ -18,9 +18,9 @@ export const Navbar = () => {
   const pathname = useLocation().pathname
 
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'How it Works', href: '/how-it-works' },
+    { label: 'Présentattion', href: '/' },
+    { label: 'A propos', href: '/about' },
+    { label: 'Comment ça marche', href: '/how-it-works' },
     { label: 'Credits', href: '/credits' },
   ]
 
@@ -40,8 +40,13 @@ export const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-semibold">
-              FuzzyCredits
+            <Link to="/" className="flex items-center gap-2">
+              <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                <Activity className="size-4" aria-hidden="true" />
+              </span>
+              <span className="text-base font-semibold tracking-tight">
+                FuzzyCredit
+              </span>
             </Link>
           </div>
 

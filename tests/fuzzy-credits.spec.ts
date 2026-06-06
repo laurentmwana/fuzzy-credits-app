@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { FuzzyCreditEngine } from '#/fuzzy-credits'
-import { fuzzifyDebt, fuzzifyIncome } from '#/fuzzy-credits'
+import { FuzzyCreditEngine, fuzzifyDebt, fuzzifyIncome  } from '#/fuzzy-credits'
 
 describe('FuzzyCreditEngine', () => {
   const engine = new FuzzyCreditEngine()
