@@ -9,7 +9,7 @@ export function defuzzify(result: InferenceResult): {
   const { approve, review, reject } = result
 
   // Find highest activation degree
-  let maxDegree = Math.max(approve, review, reject)
+  const maxDegree = Math.max(approve, review, reject)
   let decision: Decision = 'REVIEW'
 
   // Select decision with highest degree
